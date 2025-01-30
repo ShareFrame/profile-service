@@ -6,10 +6,6 @@ type UtilACcountCreds struct {
 	DID      string `json:"did"`
 }
 
-type ProfileRequest struct {
-	DID string `json:"did"`
-}
-
 type SessionRequest struct {
 	Identifier string `json:"identifier"`
 	Password   string `json:"password"`
