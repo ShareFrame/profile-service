@@ -70,7 +70,7 @@ func ProfileHandler(ctx context.Context, event map[string]interface{}) (*models.
 		return &models.ProfileResponse{}, fmt.Errorf("error creating session for user %s: %w", utilAccount.Username, err)
 	}
 
-	logrus.WithField("access_token", session.AccessJwt[:10]).Info("Session created successfully (token truncated)")
+	logrus.Info("Session created successfully")
 
 	profile, err := atProtoClient.GetProfile(ctx, did, session.AccessJwt)
 	if err != nil {
