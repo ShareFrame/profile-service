@@ -26,3 +26,4 @@ go.work.sum
 
 bootstrap
 function.zip
+vendor
